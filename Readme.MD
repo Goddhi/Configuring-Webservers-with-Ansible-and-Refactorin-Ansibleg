@@ -364,7 +364,7 @@ Now run the playbook against your uat inventory and see what happens:
 cd ansible-config-mgt
 ansible-playbook -i inventory/uat.yml playbooks/site.yml
 ```
-![ansible](ansible.png)
+![alt text](ansible.png "Title")
 
 You should be able to see both of your UAT Web servers configured and you can try to reach them from your browser:
 ```
