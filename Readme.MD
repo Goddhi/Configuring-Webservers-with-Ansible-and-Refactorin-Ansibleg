@@ -91,3 +91,6 @@ cd ansible-config-mgt
 ansible-playbook -i inventory/dev.yml playbooks/common.yml
 ```
 You can go to each of the servers and check if wireshark has been installed by running which wireshark or wireshark --version
+
+
+## IMPLEMENTING ANSIBLE REFACTORING AND STATIC ASSIGNMENTS (IMPORTS AND ROLES)
