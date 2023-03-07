@@ -168,7 +168,7 @@ Now your Jenkins pipeline is more neat and clean.
 - import_playbook: ../static-assignments/common.yml
 ```
 
-The code above uses built in (!import_playbook)[https://docs.ansible.com/ansible/latest/collections/ansible/builtin/import_playbook_module.html] Ansible module.
+The code above uses built in [import_playbook](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/import_playbook_module.html) Ansible module.
 
 Your folder structure should look like this;
 ```
@@ -224,7 +224,7 @@ Make sure that wireshark is deleted on all the servers by running wireshark --ve
 Now you have learned how to use import_playbooks module and you have a ready solution to install/delete packages on multiple servers with just one command.
 
 ## CONFIGURE UAT WEBSERVERS WITH A ROLE ‘WEBSERVER’
-We have our nice and clean dev environment, so let us put it aside and configure 2 new Web Servers as uat. We could write tasks to configure Web Servers in the same playbook, but it would be too messy, instead, we will use a dedicated (!role)[https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html] to make our configuration reusable.
+We have our nice and clean dev environment, so let us put it aside and configure 2 new Web Servers as uat. We could write tasks to configure Web Servers in the same playbook, but it would be too messy, instead, we will use a dedicated [role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html) to make our configuration reusable.
 
 Launch 2 fresh EC2 instances using RHEL 8 image, we will use them as our uat servers, so give them names accordingly – Web1-UAT and Web2-UAT.
 Tip: Do not forget to stop EC2 instances that you are not using at the moment to avoid paying extra. For now, you only need 2 new RHEL 8 servers as Web Servers and 1 existing Jenkins-Ansible server up and running.
@@ -362,7 +362,9 @@ Now run the playbook against your uat inventory and see what happens:
 
 ```
 cd ansible-config-mgt
+ansible-playbook -i inventory/uat.yml playbooks/site.yml
 ```
+![ansible](/home/goddhi/ansible-config-mgt/ansible.png)
 
 You should be able to see both of your UAT Web servers configured and you can try to reach them from your browser:
 
