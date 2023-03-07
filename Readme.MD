@@ -364,12 +364,13 @@ Now run the playbook against your uat inventory and see what happens:
 cd ansible-config-mgt
 ansible-playbook -i inventory/uat.yml playbooks/site.yml
 ```
-![ansible](/home/goddhi/ansible-config-mgt/ansible.png)
+![ansible](ansible.png)
 
 You should be able to see both of your UAT Web servers configured and you can try to reach them from your browser:
-
+```
 http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
-
+```
 or
-
+```
 http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
+```
